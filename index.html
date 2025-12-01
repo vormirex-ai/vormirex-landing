@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vormirex – Future of AI Learning</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,7 +14,7 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-     <img src="./logo.png" alt="">
+      <img src="./logo.png" alt="Vormirex"/>
     </div>
     <div class="menu-toggle" id="mobile-menu">
       <span class="bar"></span>
@@ -29,53 +30,218 @@
     </ul>
   </nav>
 
-  <!-- HOME -->
-  <section id="home" class="page-section active">
-    <div class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content hidden">
-        <h1>Fun. Smart. <br><span class="highlight">AI Learning.</span></h1>
-        <p>Unlock your potential with 24/7 AI tutors, gamified quizzes, and live interactive video classes.</p>
-        <div class="btn-group">
-          <a href="#courses" class="hero-btn primary nav-link">Explore Courses</a>
-          <a href="#about" class="hero-btn secondary nav-link">How it works</a>
-        </div>
+ 
+<!-- HOME SECTION -->
+<section id="home" class="page-section active">
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <!-- Big Heading – moved way up -->
+      <h1 class="homeh1">
+        <span class="highlight">Fun Smart. AI Learning.</span>
+      </h1>
 
-        <!-- New Trust Badges -->
-        <div class="trust-badges">
-          <div class="badge-item"><i class="fas fa-users"></i> 50,000+ Students</div>
-          <div class="badge-item"><i class="fas fa-star"></i> 4.9/5 Rating</div>
-          <div class="badge-item"><i class="fas fa-trophy"></i> #1 AI Learning App</div>
-          <div class="badge-item"><i class="fas fa-shield-alt"></i> 100% Safe & Secure</div>
-        </div>
+      <!-- Sub-text and buttons -->
+      <p class="homepageintro">
+        Learn faster, smarter, and better with Vormirex!<br>
+        Our AI-powered tools help you master concepts, improve focus, and stay ahead.
+      </p>
+
+      <div class="btn-group">
+        <a href="#courses" class="hero-btn primary nav-link">Explore Courses</a>
+        <a href="#about" class="hero-btn secondary nav-link">How it works</a>
+      </div>
+      
+
+    
+  </div>
+    </div>
+  </div>
+
+  <!-- NEW: Elevate Learning Cards Section (unchanged) -->
+  <div class="elevate-section">
+    <div class="container">
+      <h2 class="elevate-title">Elevate Learning with Vormirex AI</h2>
+      <p class="elevate-subtitle">
+        Discover the future of learning with VORMIREX, India's leading interactive AI education app...
+      </p>
+
+      <!-- NEW: Alternating Image-Left / Text-Right Cards Section -->
+<div class="features-alternating">
+  <div class="container">
+
+    <!-- Card 1: Image Left → Text Right -->
+    <div class="feature-row">
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&auto=format&fit=crop" alt="Interactive Learning">
+      </div>
+      <div class="feature-text">
+        <h3>Interactive Learning Modules</h3>
+        <p>Engaging lessons that adapt to your pace. Visual explanations, quizzes, and real-time feedback make learning feel like a game — not a chore.</p>
+        <ul class="feature-list">
+          <li>Adaptive difficulty</li>
+          <li>Rich animations & videos</li>
+          <li>Instant doubt clearing</li>
+        </ul>
       </div>
     </div>
-  </section>
+
+    <!-- Card 2: Text Left → Image Right (reversed) -->
+    <div class="feature-row reverse">
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=900&auto=format&fit=crop" alt="AI Tutor">
+      </div>
+      <div class="feature-text">
+        <h3>24/7 AI Tutor That Never Sleeps</h3>
+        <p>Get instant help anytime. Ask questions in plain English — our AI explains concepts like a patient teacher, in simple language.</p>
+        <ul class="feature-list">
+          <li>Available 24×7</li>
+          <li>Explains in Hindi + English</li>
+          <li>Step-by-step solutions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 3: Image Left → Text Right -->
+    <div class="feature-row">
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=900&auto=format&fit=crop" alt="Progress Tracking">
+      </div>
+      <div class="feature-text">
+        <h3>AI-Powered Progress Tracking</h3>
+        <p>See exactly where you stand. Smart analytics show your strengths, weak topics, and daily improvement — all in beautiful charts.</p>
+        <ul class="feature-list">
+          <li>Daily & weekly reports</li>
+          <li>Weak topic alerts</li>
+          <li>Parent dashboard (coming soon)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Card 4: Text Left → Image Right -->
+    <div class="feature-row reverse">
+      <div class="feature-image">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&auto=format&fit=crop" alt="Personalized Path">
+      </div>
+      <div class="feature-text">
+        <h3>Personalized Learning Paths</h3>
+        <p>No two students are the same. Vormirex builds a unique study plan just for you — based on your goals, speed, and learning style.</p>
+        <ul class="feature-list">
+          <li>Custom daily targets</li>
+          <li>Skip what you already know</li>
+          <li>Focus on your weak areas</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+</section>
+
+
+      
 
   <!-- ABOUT -->
   <section id="about" class="page-section">
-    <div class="section container">
-      <div class="split-layout">
-        <div class="text-content hidden">
-          <div class="badge">About Us</div>
-          <h2>What is Vormirex?</h2>
-          <p>
-            Vormirex isn't just an app; it's your personal learning companion. 
-            We use advanced AI to turn boring text into interactive conversations, 
-            gamified challenges, and real-time doubt solving.
-          </p>
-          <ul class="check-list">
-            <li><i class="fas fa-check-circle"></i> Personalized Learning Paths</li>
-            <li><i class="fas fa-check-circle"></i> Instant Doubt Resolution</li>
-            <li><i class="fas fa-check-circle"></i> Global Student Community</li>
-          </ul>
-        </div>
-        <div class="image-content hidden">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000" alt="Students learning">
+  <div class="about-wrapper">
+    <div class="about-container">
+
+      <!-- Block 1: What is Vormirex? -->
+      <div class="about-block visible">
+        <div class="about-split">
+          <div class="text-content">
+            <span class="about-badge">About Us</span>
+            <h2 class="about-heading">What is Vormirex?</h2>
+            <p class="about-text">
+              Vormirex isn't just an app; it's your personal learning companion. 
+              We use advanced AI to turn boring text into interactive conversations, 
+              gamified challenges, and real-time doubt solving.
+            </p>
+            <ul class="about-checklist">
+              <li><i class="fas fa-check-circle"></i> Personalized Learning Paths</li>
+              <li><i class="fas fa-check-circle"></i> Instant Doubt Resolution</li>
+              <li><i class="fas fa-check-circle"></i> Global Student Community</li>
+            </ul>
+          </div>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000" alt="Students learning">
+          </div>
         </div>
       </div>
+
+      <!-- Block 2: Vision & Mission -->
+      <div class="about-block visible">
+        <div class="about-split reverse">
+          <div class="text-content">
+            <span class="about-badge">Our Vision & Mission</span>
+            <h2 class="about-heading">Empowering Students Everywhere</h2>
+            <p class="about-text">
+              Our vision is to make learning fun, personalized, and accessible to every student globally. 
+              Our mission is to leverage AI to provide interactive learning experiences and gamified tools.
+            </p>
+            <ul class="about-checklist">
+              <li><i class="fas fa-bolt"></i> Make learning engaging and interactive</li>
+              <li><i class="fas fa-lightbulb"></i> Offer AI-powered personalized study paths</li>
+              <li><i class="fas fa-users"></i> Connect students with a global learning community</li>
+            </ul>
+          </div>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000" alt="Mission and Vision">
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 3: Why Vormirex is Unique -->
+      <div class="about-block visible">
+        <div class="about-split">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000" alt="Features">
+          </div>
+          <div class="text-content">
+            <span class="about-badge">Features</span>
+            <h2 class="about-heading">Why Vormirex is Unique</h2>
+            <p class="about-text">
+              Vormirex combines advanced AI, gamified quizzes, and live interactive sessions to give you a full learning ecosystem:
+            </p>
+            <ul class="about-checklist">
+              <li><i class="fas fa-robot"></i> 24/7 AI tutor assistance</li>
+              <li><i class="fas fa-gamepad"></i> Gamified quizzes to boost retention</li>
+              <li><i class="fas fa-video"></i> Live interactive video classes</li>
+              <li><i class="fas fa-chalkboard-teacher"></i> Personalized study recommendations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 4: Our Team -->
+      <div class="about-block visible">
+        <div class="about-split reverse">
+          <div class="text-content">
+            <span class="about-badge">Our Team</span>
+            <h2 class="about-heading">Meet the Minds Behind Vormirex</h2>
+            <p class="about-text">
+              Our team is a mix of passionate educators, AI engineers, and content creators dedicated to transforming how students learn.
+            </p>
+            <ul class="about-checklist">
+              <li><i class="fas fa-user-graduate"></i> Experienced educators</li>
+              <li><i class="fas fa-laptop-code"></i> Skilled AI developers</li>
+              <li><i class="fas fa-lightbulb"></i> Creative content designers</li>
+            </ul>
+          </div>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000" alt="Team">
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- FEATURES -->
   <section id="features" class="page-section">
@@ -268,22 +434,34 @@
       </div>
     </div>
   </section>
- <footer>
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3>Vormirex.</h3>
-          <p>Empowering the next generation.</p>
+     <footer class="footer">
+        <div class="footer-logo">
+            <svg width="157" height="40" viewBox="0 0 157 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- SVG content goes here -->
+            </svg>
         </div>
-        <div class="socials">
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
+        <p class="footer-text">
+            Copyright © 2025 <a href="Vorimex.com">Vorimex</a>. All rights reserved.
+        </p>
+        <div class="social-icons">
+            <a href="#" class="icon">
+                <!-- Facebook SVG -->
+            </a>
+            <a href="#" class="icon">
+                <!-- Instagram SVG -->
+            </a>
+            <a href="#" class="icon">
+                <!-- LinkedIn SVG -->
+            </a>
+            <a href="#" class="icon">
+                <!-- Twitter SVG -->
+            </a>
+            <a href="#" class="icon">
+                <!-- GitHub SVG -->
+            </a>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 Vormirex. All Rights Reserved.</p>
-      </div>
     </footer>
+
 
   <div class="floating-chat">
     <i class="fas fa-comment-dots"></i>
