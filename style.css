@@ -175,7 +175,7 @@ body {
 }
 
 /* Navbar Logo Styling */
-.logo img {
+.logo-img {
   height: 55px; /* Balanced height */
   width: auto; /* Keeps proportions */
   display: block;
