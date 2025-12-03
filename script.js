@@ -1,85 +1,102 @@
-// Mobile Menu Toggle
+// ================================================
+// VORMIREX – FINAL WORKING JS (Features, Courses, Contact FIXED)
+// ================================================
+
 const menuToggle = document.getElementById("mobile-menu");
 const navLinks = document.querySelector(".nav-links");
+const sections = document.querySelectorAll(".page-section");
+const navItems = document.querySelectorAll(".nav-link");
 
+// Mobile Menu Toggle
 menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
   menuToggle.classList.toggle("is-active");
+  navLinks.classList.toggle("active");
 });
 
-// Close mobile menu when a link is clicked
-document.querySelectorAll(".nav-link").forEach((link) => {
+// Close mobile menu when clicking any link
+navItems.forEach(link => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
     menuToggle.classList.remove("is-active");
   });
 });
 
-// Single Page Navigation - Show only one section
-const sections = document.querySelectorAll(".page-section");
-const navItems = document.querySelectorAll(".nav-link");
+// MAIN SHOW SECTION FUNCTION – NOW 100% WORKING
+function showSection(sectionId) {
+  // Hide ALL sections
+  sections.forEach(sec => {
+    sec.classList.remove("active");
+    sec.style.display = "none";
+  });
 
-function showSection(id) {
-  sections.forEach((sec) => sec.classList.remove("active"));
-  document.getElementById(id)?.classList.add("active");
+  // Show the correct section
+  const target = document.getElementById(sectionId);
+  if (target) {
+    target.style.display = "block";
+    setTimeout(() => {
+      target.classList.add("active");
+      window.scrollTo(0, 0);
+    }, 10);
+  } else {
+    console.error("Section not found:", sectionId);
+  }
 
-  // Update active navbar link
-  navItems.forEach((item) => item.classList.remove("active"));
-  document.querySelector(`a[href="#${id}"]`)?.classList.add("active");
+  // Update active nav link
+  navItems.forEach(item => item.classList.remove("active"));
+  const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+  if (activeLink) activeLink.classList.add("active");
 
   // Update URL
-  history.pushState(null, null, `#${id}`);
+  history.pushState(null, null, `#${sectionId}`);
 }
 
-// Click handlers
-navItems.forEach((link) => {
+// Click on any nav link → go to section
+navItems.forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
-    const target = link.getAttribute("href").substring(1);
-    showSection(target);
+    const id = link.getAttribute("href").substring(1);
+    showSection(id);
   });
 });
 
-// On load & back button
+// On page load – check URL hash
 window.addEventListener("load", () => {
-  const hash = window.location.hash.substring(1) || "home";
+  let hash = window.location.hash.substring(1);
+  if (!hash || !document.getElementById(hash)) hash = "home";
   showSection(hash);
 });
+
+// Back/Forward buttons
 window.addEventListener("popstate", () => {
-  const hash = window.location.hash.substring(1) || "home";
+  let hash = window.location.hash.substring(1);
+  if (!hash || !document.getElementById(hash)) hash = "home";
   showSection(hash);
 });
 
-// Scroll Reveal Animation
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
+// Scroll Animations (Features, Courses, About, etc.)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.1 });
 
-document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
+document.querySelectorAll(".hidden, .about-block").forEach(el => observer.observe(el));
 
 // Floating Chat
-document.querySelector(".floating-chat").addEventListener("click", () => {
-  alert("AI Chatbot coming soon!");
+document.querySelector(".floating-chat")?.addEventListener("click", () => {
+  alert("AI Chat coming soon!");
 });
-// Contact Form Success Message
-document
-  .getElementById("contactForm")
-  ?.addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert(
-      "Thank you! We have received your message. Will reply within 24 hours"
-    );
-    this.reset();
-  });
 
-// Close button goes back to home
+// Contact Form
+document.getElementById("contactForm")?.addEventListener("submit", e => {
+  e.preventDefault();
+  alert("Message sent! We'll reply soon.");
+  e.target.reset();
+});
+
+// Close Contact → Go Home
 document.querySelector(".close-contact")?.addEventListener("click", () => {
   showSection("home");
 });
