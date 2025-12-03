@@ -13,9 +13,10 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">
-      <img src="./logo.png" alt="Vormirex"/>
-    </div>
+    <div class="logo-container">
+  <img src="./images/logo.png" class="logo-img" />
+</div>
+
     <div class="menu-toggle" id="mobile-menu">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -32,7 +33,7 @@
 
  
 <!-- HOME SECTION -->
-<section id="home" class="page-section active">
+<<section id="home" class="page-section active">
   <div class="hero">
     <div class="hero-overlay"></div>
     
@@ -64,7 +65,7 @@
     <div class="container">
       <h2 class="elevate-title">Elevate Learning with Vormirex AI</h2>
       <p class="elevate-subtitle">
-        Discover the future of learning with VORMIREX, India's leading interactive AI education app...
+        Discover the future of learning with VORMIREX, India's leading interactive AI education app.
       </p>
 
       <!-- NEW: Alternating Image-Left / Text-Right Cards Section -->
@@ -143,11 +144,10 @@
   </div>
 </section>
 
-
       
 
   <!-- ABOUT -->
-  <section id="about" class="page-section">
+ <section id="about" class="page-section">
   <div class="about-wrapper">
     <div class="about-container">
 
@@ -292,43 +292,58 @@
   </section>
 
   <section id="courses" class="page-section">
-  <div class="section container">
-    <h2 class="section-title hidden">Popular Courses</h2>
+    <div class="container">
+      <h2 class="magic-title">
+        <span>Popular Courses</span>
+        <div class="title-glow"></div>
+      </h2>
 
-    <!-- 3 × 3 Grid (3 cards per row) -->
-    <div class="courses-grid">
-      <!-- Card 1 -->
-      <div class="course-card hidden">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800');"></div>
-        <div class="card-body">
-          <span class="tag">Maths</span>
-          <h3>Visual Mathematics</h3>
-          <p>Master geometry and algebra with 3D models.</p>
-          <a href="#" class="link-btn">View Course <i class="fas fa-arrow-right"></i></a>
+      <div class="courses-grid">
+
+        <!-- Normal Cards -->
+        <div class="course-card">
+          <div class="card-img-wrapper">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800');"></div>
+            <div class="img-overlay"></div>
+            <div class="sparkles"></div>
+          </div>
+          <div class="card-body">
+            <span class="tag">Maths</span>
+            <h3>Visual Mathematics</h3>
+            <p>Master geometry and algebra with 3D models.</p>
+            <a href="#" class="link-btn">View Course <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-      </div>
 
       <!-- Card 2 -->
-      <div class="course-card hidden">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800');"></div>
-        <div class="card-body">
-          <span class="tag">Coding</span>
-          <h3>Python for Kids</h3>
-          <p>Build your first game and app in 4 weeks.</p>
-          <a href="#" class="link-btn">View Course <i class="fas fa-arrow-right"></i></a>
+      <div class="course-card">
+          <div class="card-img-wrapper">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800');"></div>
+            <div class="img-overlay"></div>
+            <div class="sparkles"></div>
+          </div>
+          <div class="card-body">
+            <span class="tag">Coding</span>
+            <h3>Python for Kids</h3>
+            <p>Build your first game and app in 4 weeks.</p>
+            <a href="#" class="link-btn">View Course <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-      </div>
 
       <!-- Card 3 -->
-      <div class="course-card hidden">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800');"></div>
-        <div class="card-body">
-          <span class="tag">Business</span>
-          <h3>Digital Marketing</h3>
-          <p>Learn SEO, Ads and Social Media strategy.</p>
-          <a href="#" class="link-btn">View Course <i class="fas fa-arrow-right"></i></a>
+      <div class="course-card">
+          <div class="card-img-wrapper">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800');"></div>
+            <div class="img-overlay"></div>
+            <div class="sparkles"></div>
+          </div>
+          <div class="card-body">
+            <span class="tag">Business</span>
+            <h3>Digital Marketing</h3>
+            <p>Learn SEO, Ads and Social Media strategy.</p>
+            <a href="#" class="link-btn">View Course <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-      </div>
 
       <!-- Card 4 -->
       <div class="course-card hidden">
