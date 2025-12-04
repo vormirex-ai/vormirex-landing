@@ -1259,35 +1259,6 @@ body {
 .page-section.active {
   transform: translateY(0);
 }
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 80px 20px;
-  background: linear-gradient(to bottom, #5524b7, #380b60);
-  color: rgba(255, 255, 255, 0.7);
-  text-align: center;
-}
-
-.footer-logo svg {
-  max-width: 200px;
-}
-
-.footer-text {
-  margin-top: 16px;
-  font-size: 14px;
-}
-
-.footer-text a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-}
-
-.footer-text a:hover {
-  color: #fff;
-}
 
 .social-icons {
   display: flex;
@@ -1561,4 +1532,108 @@ body {
 .site-logo img:hover {
   transform: translateY(-2px);
   filter: drop-shadow(0 5px 15px rgba(129, 140, 248, 0.55));
+}
+
+/* Footer Wrapper */
+.footer {
+  width: 100%;
+  padding: 30px 40px;
+  color: black;
+  background: var(--primary);
+  border-top: 1px solid #e5e5e5;
+  font-family: Arial, sans-serif;
+}
+.footer-logo img {
+  height: 70px; /* adjust size */
+  width: auto;
+  display: block;
+  object-fit: contain;
+
+  /* make black logo visible on dark background */
+  filter: brightness(1.8) /* brightens the blacks */
+    drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
+
+  transition: 0.3s ease;
+}
+
+/* Optional hover effect */
+.footer-logo img:hover {
+  transform: scale(1.05);
+  filter: brightness(2) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+}
+
+/* Top Section Layout */
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 768px) {
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Left Section */
+.footer-left {
+  max-width: 350px;
+}
+
+.footer-logo svg {
+  height: 40px;
+  width: auto;
+}
+
+.footer-description {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Right Section */
+.footer-right {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom Text */
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+.footer-bottom a {
+  color: #f1f1f3;
+  text-decoration: none;
 }
