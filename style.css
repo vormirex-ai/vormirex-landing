@@ -3375,3 +3375,247 @@ body {
 .courses-grid .course-card:nth-child(2) .link-btn:hover i {
     transform: translateX(10px);
 }
+/* ====================================
+   ENHANCED 3x3 FEATURES GRID RESPONSIVE
+   ==================================== */
+
+/* Desktop - 3x3 grid */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tablet - 2x3 grid (2 columns, 3 rows) */
+@media (max-width: 992px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 15px;
+  }
+}
+
+/* Mobile - 1x6 grid (single column) */
+@media (max-width: 600px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px 15px;
+  }
+  
+  .grid-3 .card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Small mobile optimization */
+@media (max-width: 480px) {
+  .grid-3 {
+    gap: 18px;
+    padding: 5px 10px;
+  }
+  
+  .grid-3 .card > * {
+    padding: 0 20px;
+  }
+  
+  .grid-3 .card img {
+    height: 160px;
+  }
+}
+
+/* Large screens - maintain 3x3 with more spacing */
+@media (min-width: 1400px) {
+  .grid-3 {
+    max-width: 1400px;
+    gap: 40px;
+  }
+}
+/* ======================================================
+   👇 NAVBAR VISIBILITY FIX — Responsive & Consistent
+   Keeps nav links visible on laptops and smaller tablets
+   while enabling hamburger only on true mobiles.
+   ====================================================== */
+
+/* Base (Desktop & Laptop) */
+.nav-links {
+  display: flex;
+  gap: 34px;
+  list-style: none;
+}
+
+/* Make sure links are always visible until mobile breakpoint */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+    height: auto;
+    background: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: none;
+    transition: none;
+  }
+
+  /* Hide burger icon on wider screens */
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
+/* Mobile (≤768px) - activate hamburger menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: var(--light);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    transition: right 0.45s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+}
+/* ============================================
+   NAVBAR (Smart Responsiveness + Smooth CSS)
+   ============================================ */
+
+/* Desktop (default) – Keep your existing navbar styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--light);
+  padding: 16px 5%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+  backdrop-filter: blur(12px);
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+  list-style: none;
+}
+
+/* Laptop (minimized windows) – Still show icons, but tighter spacing */
+@media (max-width: 900px) and (min-width: 769px) {
+  .nav-links {
+    gap: 20px; /* Reduce gap between links */
+  }
+
+  .nav-link {
+    font-size: 1rem; /* Slightly smaller font */
+  }
+
+  .logo-text {
+    font-size: 1.3rem; /* Adjust logo text size */
+  }
+
+  .site-logo img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* Tablet & Mobile – Hamburger menu appears, desktop nav hides */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  /* Show hamburger menu on mobile only */
+  .menu-toggle {
+    display: flex !important; /* Override display: none */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Hamburger bars (style & animation) */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Mobile nav items (staggered animation) */
+  .nav-links li {
+    opacity: 0;
+    transform: translateX(50px);
+    margin: 15px 0;
+    transition: opacity 0.3s, transform 0.4s;
+  }
+
+  .nav-links.active li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+  .nav-links.active li:nth-child(2) { transition-delay: 0.15s; }
+  .nav-links.active li:nth-child(3) { transition-delay: 0.2s; }
+  .nav-links.active li:nth-child(4) { transition-delay: 0.25s; }
+  .nav-links.active li:nth-child(5) { transition-delay: 0.3s; }
+
+  /* Mobile logo & CTA button adjustments */
+  .site-logo img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .logo-text {
+    font-size: 1.2rem !important;
+    padding-top: 15px;
+  }
+
+  .btn-solid {
+    width: 100% !important;
+    max-width: 260px;
+    text-align: center;
+    padding: 12px 30px !important;
+    margin-top: 20px !important;
+  }
+}
