@@ -186,6 +186,14 @@ body {
   border-radius: 50%;
   border: 3px solid var(--primary);
 } */
+.logo-text {
+  padding-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  /* color: var(--primary); */
+  color: black;
+  letter-spacing: normal;
+}
 
 .nav-links {
   display: flex;
@@ -953,6 +961,130 @@ body {
     transform: translateY(-60px) scale(1.10);  /* Moves clearly UPWARD */
   }
 }
+.highlight-card::before {
+  content: "★ MOST POPULAR";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #f59e0b, #ea580c);
+  color: white;
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  z-index: 11;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes premiumFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1.08);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.1);
+  }
+}
+
+/* Button Animation */
+.link-btn {
+  color: #6366f1;
+  font-weight: 600;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #6366f1;
+  transition: width 0.4s ease;
+}
+
+.link-btn:hover {
+  color: #4f46e5;
+  transform: translateX(8px);
+}
+
+.link-btn:hover::after {
+  width: 100%;
+}
+
+.link-btn i {
+  transition: transform 0.3s ease;
+}
+
+.link-btn:hover i {
+  transform: translateX(6px);
+}
+@keyframes fadeUpPop {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.course-card {
+  animation: fadeUpPop 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ====================================
+   CTA & CONTACT
+   ==================================== */
+.cta {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+.cta h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+.cta-btn {
+  display: inline-block;
+  background: white;
+  color: var(--primary);
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-weight: 700;
+  margin-top: 30px;
+  transition: var(--transition);
+}
+.cta-btn:hover {
+  transform: translateY(-8px) scale(1.1);
+}
+
+.highlight-card {
+  grid-column: span 1;
+  transform: scale(1.08);
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899) border-box;
+  animation: premiumFloat 6s ease-in-out infinite;
+  z-index: 10;
+  position: relative;
+}
+
 .highlight-card::before {
   content: "★ MOST POPULAR";
   position: absolute;
@@ -2034,6 +2166,68 @@ body {
   gap: 80px;
   align-items: center;
   margin-bottom: 120px;
+  }
+
+
+/* Left Section */
+.footer-left {
+  max-width: 350px;
+}
+
+.footer-logo svg {
+  height: 40px;
+  width: auto;
+}
+
+.footer-description {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Right Section */
+.footer-right {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom Text */
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+.footer-bottom a {
+  color: purple;
+  text-decoration: none;
+
 }
 .feature-row.reverse { direction: rtl; }
 .feature-row.reverse > * { direction: ltr; }
