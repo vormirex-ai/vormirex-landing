@@ -808,10 +808,6 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-/* ====================================
-   FEATURES & COURSES – Stagger Animations
-   ==================================== */
-/* Enhanced Grid & Smooth Animations */
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1634,6 +1630,6 @@ body {
 }
 
 .footer-bottom a {
-  color: #f1f1f3;
+  color: purple;
   text-decoration: none;
 }
